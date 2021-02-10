@@ -1,14 +1,39 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/test/test"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "校园疫情防控平台",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/test/test",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "text": "个人信息",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/info.png",
+        "selectedIconPath": "images/info_selected.png"
+      },
+      {
+        "text": "体温",
+        "pagePath": "pages/test/test",
+        "iconPath": "images/temp.png",
+        "selectedIconPath": "images/temp_selected.png"
+      }
+    ],
+    "color": "black",
+    "selectedColor": "#FF4500"
+  }
 }
