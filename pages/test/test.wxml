@@ -1,2 +1,12 @@
 <!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
+<view class="tit">
+<text>校园疫情防控平台</text>
+</view>
+<view class="containers">
+<image class="stu" src="../../images/student.png"></image>
+<image class="tea" src="../../images/teacher.png"></image>
+</view>
+<view class="con">
+<text>我是学生</text>
+<text class="cont">我是老师</text>
+</view>
