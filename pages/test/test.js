@@ -1,4 +1,7 @@
 // pages/test/test.js
+var stuname='chenmoc';
+var teaname='Chen';
+
 Page({
 
   /**
@@ -6,6 +9,23 @@ Page({
    */
   data: {
 
+  },
+
+  stuleap:function(e){
+    console.log(stuname);
+    wx.hideTabBar({
+      animation: true,
+      success: (res) => {},
+      fail: (res) => {},
+      complete: (res) => {},
+    })
+  },
+
+tealeap:function(e){
+    console.log(teaname);
+    wx.showTabBar({
+      animation: true,
+    })
   },
 
   /**

@@ -38,7 +38,7 @@
   margin-top:10px;
 }
 
-.cont{
+.inter{
   font-size:20px;
   font-weight:bold;
   margin-left:70px;

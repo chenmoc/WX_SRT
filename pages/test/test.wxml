@@ -3,10 +3,10 @@
 <text>校园疫情防控平台</text>
 </view>
 <view class="containers">
-<image class="stu" src="../../images/student.png"></image>
-<image class="tea" src="../../images/teacher.png"></image>
+<image bindtap="stuleap" class="stu" src="../../images/student.png"></image>
+<image bindtap="tealeap" class="tea" src="../../images/teacher.png"></image>
 </view>
 <view class="con">
-<text>我是学生</text>
-<text class="cont">我是老师</text>
+<text bindtap="stuleap">我是学生</text>
+<text bindtap='tealeap' class="inter">我是老师</text>
 </view>

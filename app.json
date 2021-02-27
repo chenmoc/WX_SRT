@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/test/test",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/test/test"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,7 +28,7 @@
       },
       {
         "text": "体温",
-        "pagePath": "pages/test/test",
+        "pagePath": "pages/logs/logs",
         "iconPath": "images/temp.png",
         "selectedIconPath": "images/temp_selected.png"
       }
