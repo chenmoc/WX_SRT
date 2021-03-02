@@ -1,0 +1,9 @@
+/* pages/map/map.wxss */
+.test{
+  align-content: center;
+  margin-left: 30%;
+}
+
+#chen{
+  margin-left: 30%;
+}

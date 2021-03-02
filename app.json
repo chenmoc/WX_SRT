@@ -2,7 +2,8 @@
   "pages": [
     "pages/test/test",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,7 +23,7 @@
       },
       {
         "text": "个人信息",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/map/map",
         "iconPath": "images/info.png",
         "selectedIconPath": "images/info_selected.png"
       },
@@ -35,5 +36,10 @@
     ],
     "color": "black",
     "selectedColor": "#FF4500"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序实现上课签到功能"
+    }
   }
 }

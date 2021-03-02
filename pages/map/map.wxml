@@ -1,0 +1,2 @@
+<!--pages/map/map.wxml-->
+<text id= "chen" space="emsp">当前位置 \n       经度为：{{long1}} \n       纬度为：{{lan1}}</text>
