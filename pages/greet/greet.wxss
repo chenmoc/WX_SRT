@@ -1,0 +1,41 @@
+/* pages/greet/greet.wxss */
+.title{
+  font-size:30px;
+  flex-direction:column;
+  align-items:center;
+  margin-left:150rpx;
+  font-weight:bold;
+  margin-top:100rpx;
+  color:	#FF4500;
+}
+
+.stu {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 40rpx;
+  border-radius: 60%;
+}
+
+.tea{
+  width:200rpx;
+  height:200rpx;
+  margin: 40rpx;
+  border-radius:60%;
+}
+
+
+.icons{
+  padding-top:180rpx;
+  padding-left:100rpx;
+}
+
+.words{
+  font-size:21px;
+  font-weight:bold;
+  margin-left:130rpx;
+  margin-top:10px;
+}
+
+.w2{
+  margin-left:140rpx;
+}

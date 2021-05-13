@@ -2,7 +2,7 @@
 var lat1= 'null';
 var lng1 = 'null';
 
-function distance(lat1,long1,lat2,long2) {
+function distance(lat1,long1,lat2,long2) {  //距离函数：根据两点经纬度计算距离（km）
   var lat3 = lat1*Math.PI/180.0;
   var lat4 = lat2*Math.PI/180.0;
   var a = Math.abs(lat1-lat2) * Math.PI/180.0;

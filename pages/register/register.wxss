@@ -1,0 +1,32 @@
+/* pages/register/register.wxss */
+@import "../../lib/weui.wxss";
+
+.title{
+  font-size:25px;
+  font-weight:bold;
+  margin-left:100rpx;
+  margin-top:100rpx;
+  text-decoration-line:underline;
+  text-decoration-color:	#4682B4;
+  text-decoration-style: wavy;
+}
+
+.input{
+  margin-top:100rpx;
+  margin-left:70rpx;
+}
+
+.i2{
+  margin-top:50rpx;
+}
+
+.sure{
+  margin-top: 100rpx;
+}
+
+.ps{
+  font-size:18px;
+  font-weight:bold;
+  margin-left:50rpx;
+  margin-top:100rpx;
+}

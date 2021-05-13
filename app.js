@@ -33,7 +33,11 @@ App({
       }
     })
   },
+  
   globalData: {
-    userInfo: null
+    userInfo: null,
+    userNum: '',
+    userPW: '',
+    user: 0
   }
 })

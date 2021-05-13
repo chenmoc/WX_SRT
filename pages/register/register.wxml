@@ -1,0 +1,30 @@
+<!--pages/register/register.wxml-->
+<view class="title">
+  <text>注册</text>
+</view>
+
+<view class="input">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="number" maxlength="20" bindinput="inputNum" placeholder="请在此输入学号或教工号" />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title i2">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" password type="text" maxlength="20" bindinput="inputPW1" placeholder="请在此输入您的注册密码" />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title i2">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" password type="text" maxlength="20" bindinput="inputPW2" placeholder="请再次输入您的密码" />
+      </view>
+    </view>
+</view>
+
+<view class="sure">
+  <button type="primary" plain="true" bindtap="sure">确认</button>
+</view>
+
+<view class="ps">
+  <text>PS：我们不会以任何方式主动向任何\n个人或组织共享、转让您的账号和密码</text>
+</view>

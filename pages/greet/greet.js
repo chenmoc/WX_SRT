@@ -1,6 +1,5 @@
-// pages/test/test.js
-var stuname='chenmoc';
-var teaname='Chen';
+// pages/greet/greet.js
+var app = getApp();
 
 Page({
 
@@ -12,27 +11,25 @@ Page({
   },
 
   stuleap:function(e){  //学生注册函数
-    console.log(stuname);
-    wx.hideTabBar({  //隐藏菜单栏
-      animation: true,
-      success: (res) => {},
-      fail: (res) => {},
-      complete: (res) => {},
-    })
+   wx.redirectTo({
+     url: '../register/register',
+   })
   },
 
 tealeap:function(e){  //老师注册函数
-    console.log(teaname);
-    wx.showTabBar({  //显示菜单栏
-      animation: true,
-    })
+  app.globalData.user = 1;
+  wx.redirectTo({
+    url: '../register/register',
+  })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+     wx.hideTabBar({
+     animation: true,
+   })
   },
 
   /**

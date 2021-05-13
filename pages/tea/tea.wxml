@@ -3,32 +3,11 @@
   <view class="action">
     <text class="cuIcon-title text-orange"></text> 课堂签到
   </view>
-  <view class="action">
-    <button class="cu-btn light bg-blue shadow" bindtap="numSteps">{{btnText}}</button>
-  </view>
 </view>
-<view class="bg-white padding">
-  <view class="cu-steps">
-    <view class="cu-item {{index>num?'':'text-blue'}}" wx:for="{{numList}}" wx:key="id">
-      <text class="num {{index==3?'err':''}}" data-index="{{index + 1}}"></text> {{item.name}}
-    </view>
-  </view>
+<view class="padding flex flex-direction">
+  <button class="cu-btn bg-orange margin-tb-sm lg">开启上课签到</button>
 </view>
-
-
-<view class="cu-bar bg-white solid-bottom margin-top">
-  <view class="action">
-    <text class="cuIcon-title text-orange"></text> 人群密度
-  </view>
-  <view class="action">
-    <button class="cu-btn light bg-blue shadow" bindtap="numSteps">实时密度显示</button>
-  </view>
-</view>
-<view class=" space container">
-  <ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ ec }}"></ec-canvas>
-</view>
-
-    <view class="space1 cu-bar bg-white solid-bottom margin-top">
+    <view class="cu-bar bg-white solid-bottom margin-top">
   <view class="action">
     <text class="cuIcon-title text-blue"></text> 体温填报
   </view>
@@ -126,8 +105,6 @@
         </view>
       </view>
     </view>
-
-
     
 
 
