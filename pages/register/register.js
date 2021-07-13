@@ -46,7 +46,7 @@ Page({
       }
       else{
         wx.request({
-        url: 'https://chenmoc.xyz/sat.php',
+        url: 'https://chenmoc.xyz/srt/users.php',
         method: 'GET',
         data: {
           num: userNum,

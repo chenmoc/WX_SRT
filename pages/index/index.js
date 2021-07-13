@@ -290,6 +290,21 @@ Page({
            lng1 = res.longitude;
            console.log(res.latitude);
            console.log(res.longitude);
+           wx.request({
+             url: 'https://chenmoc.xyz/getLocation.php',
+             method: 'GET',
+             header: {
+               "content-type" : 'application/json'
+             },
+             data: {
+               longitude: res.longitude,
+               latitude: res.latitude
+             },
+             success: function(res){
+               console.log("damn good!");
+               console.log(res.data);
+             }
+           })
         }
       })
       console.log(lng1);

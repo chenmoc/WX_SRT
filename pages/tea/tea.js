@@ -76,39 +76,36 @@ Page({
     num: -1,
   },
   numSteps() {
-    if(this.data.n == 0){
-      this.data.n++;
-      this.setData({
-        num: this.data.num == this.data.numList.length - 1 ? 0 : this.data.num + 1,
-        btnText: '下一步'
-      })
       wx.getLocation({
         type: 'wgs84',
         success: function(res){
-          console.log(res)
+          var lat1 = '';
+          var lng1 = '';
+          console.log(res);
            lat1 = res.latitude;
            lng1 = res.longitude;
            console.log(res.latitude);
            console.log(res.longitude);
+           console.log(lat1);
+           console.log(lng1);
         }
       })
-      console.log(lng1);
-      console.log(lat1);
-    }
-   else  if(this.data.n == 1){
-     this.data.n++;
-    this.setData({
-      num: this.data.num == this.data.numList.length - 1 ? 0 : this.data.num + 1,
-      btnText: '下一步'
-    })
-  }
-  else if(this.data.n == 2){
-    this.data.n++;
-    this.setData({
-      num: this.data.num == this.data.numList.length - 1 ? 0 : this.data.num + 1,
-      btnText: '结束'
-    })
-  }
+      console.log("fffffrrrr");
+        wx.request({
+          url: 'https://chenmoc.xyz/getLocation.php',
+          method: 'GET',
+          header: {
+            'content-type': 'application/json'
+          },
+          data:{
+            longitude: '555',
+            latitude: '666'
+          },
+          success: function(res){
+            console.log(res);
+            console.log('damn good');
+          }
+        })
 },
 temper(){
   console.log(this.data.temperNum);

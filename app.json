@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/greet/greet",
-    "pages/register/register",
+    "pages/index/index",
     "pages/tea/tea",
+    "pages/register/register",
     "pages/map/map",
     "pages/logs/logs",
     "pages/test/test"
