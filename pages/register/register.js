@@ -15,6 +15,7 @@ Page({
 
   inputNum: function(e){
      userNum = e.detail.value;
+     app.globalData.userNum = userNum;
   },
 
   inputPW1: function(e){
@@ -28,12 +29,19 @@ Page({
   },
 
   sure:function(){
-    console.log(app.globalData.user);
+    console.log(app.globalData.userNum);
       var num = Number(userNum);
-      if(isNaN(num)){
+      if(isNaN(num) || num == ""){
         wx.showModal({
           title: '提示',
           content: '输入的学号或教工号格式不正确，请检查后重新输入',
+          showCancel: false
+        })
+      }
+      else if(userPW == "" || userPWA == ""){
+        wx.showModal({
+          title: '提示',
+          content: '密码不能为空，请检查密码输入',
           showCancel: false
         })
       }
@@ -46,11 +54,12 @@ Page({
       }
       else{
         wx.request({
-        url: 'https://chenmoc.xyz/srt/users.php',
+        url: 'https://chenmoc.xyz/users.php',
         method: 'GET',
         data: {
           num: userNum,
-          password: userPW
+          password: userPW,
+          check: app.globalData.user
         },
         header: {
           'content-type' : 'application/json'
@@ -58,7 +67,7 @@ Page({
         success: function(res){
           console.log("damn good");
           console.log(res.data);
-          if(res.data.status == -1){
+          if(res.data.status == -2){
             wx.showModal({
               title: '提示',
               content: '此学号或教工号已被注册，请直接登陆',
@@ -80,6 +89,12 @@ Page({
     }
   },
 
+
+  login:function(){
+    wx.redirectTo({
+      url: '../login/login',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

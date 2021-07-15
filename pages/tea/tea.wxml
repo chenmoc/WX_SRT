@@ -7,7 +7,21 @@
 <view class="padding flex flex-direction">
   <button class="cu-btn bg-orange margin-tb-sm lg" bindtap="numSteps">开启上课签到</button>
 </view>
-    <view class="cu-bar bg-white solid-bottom margin-top">
+
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange"></text> 人群密度
+  </view>
+  <view class="action">
+    <button class="cu-btn light bg-blue shadow" bindtap="numSteps">实时密度显示</button>
+  </view>
+</view>
+<view class=" space container">
+  <ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ ec }}"></ec-canvas>
+</view>
+
+    <view class="cu-bar bg-white solid-bottom margin-top space1">
   <view class="action">
     <text class="cuIcon-title text-blue"></text> 体温填报
   </view>
@@ -17,9 +31,9 @@
 </view>
 <view class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(../../../../images/te.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.xyz/te.png);"></view>
         <view class="content">
-          <view class="text-grey">201931224006</view>
+          <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
             {{temper}}
             <text  style="{{icon_style}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
@@ -32,9 +46,9 @@
     </view>
     <view style="{{list1}}" class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(../../../../images/te.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.xyz/te.png);"></view>
         <view class="content">
-          <view class="text-grey">201931224006</view>
+          <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
             {{temper1}}
             <text  style="{{icon_style1}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
@@ -47,9 +61,9 @@
     </view>
     <view style="{{list2}}" class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(../../../../images/te.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.xyz/te.png);"></view>
         <view class="content">
-          <view class="text-grey">201931224006</view>
+          <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
             {{temper2}}
             <text  style="{{icon_style2}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
@@ -62,9 +76,9 @@
     </view>
     <view style="{{list3}}" class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(../../../../images/te.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.xyz/te.png);"></view>
         <view class="content">
-          <view class="text-grey">201931224006</view>
+          <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
             {{temper3}}
             <text  style="{{icon_style3}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
@@ -77,9 +91,9 @@
     </view>
     <view style="{{list4}}" class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(../../../../images/te.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.xyz/te.png);"></view>
         <view class="content">
-          <view class="text-grey">201931224006</view>
+          <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
             {{temper4}}
             <text  style="{{icon_style4}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
@@ -92,9 +106,9 @@
     </view>
     <view style="{{list5}}" class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(../../../../images/te.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.xyz/te.png);"></view>
         <view class="content">
-          <view class="text-grey">201931224006</view>
+          <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
             {{temper5}}
             <text  style="{{icon_style5}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>

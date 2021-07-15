@@ -1,3 +1,4 @@
+var app = getApp();
 var lat1 = '';
 var lng1 = '';
 
@@ -137,6 +138,7 @@ Page({
     ec: {
       onInit: initChart
     },
+    userNum: app.globalData.userNum,
     time: '',
     time1: '',
     time2: '',
@@ -276,6 +278,7 @@ Page({
     }
   },
   numSteps() {
+    console.log(app.globalData.userNum);
     if(this.data.n == 0){
       this.data.n++;
       this.setData({
@@ -298,7 +301,8 @@ Page({
              },
              data: {
                longitude: res.longitude,
-               latitude: res.latitude
+               latitude: res.latitude,
+               userNum: app.globalData.userNum
              },
              success: function(res){
                console.log("damn good!");

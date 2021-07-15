@@ -3,6 +3,7 @@
     "pages/greet/greet",
     "pages/index/index",
     "pages/tea/tea",
+    "pages/login/login",
     "pages/register/register",
     "pages/map/map",
     "pages/logs/logs",
@@ -15,7 +16,7 @@
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
-   "sitemapLocation": "sitemap.json",
+  "sitemapLocation": "sitemap.json",
   "tabBar": {
     "list": [
       {
