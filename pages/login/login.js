@@ -40,7 +40,7 @@ sure: function(){
   }
   else{
     wx.request({
-      url: 'https://chenmoc.xyz/login.php',
+      url: 'https://chenmoc.com/srt/login.php',
       method: 'GET',
         data: {
           num: userNum,

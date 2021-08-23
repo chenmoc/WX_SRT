@@ -193,7 +193,7 @@ Page({
         }
       })
         wx.request({
-          url: 'https://chenmoc.xyz/getLocation.php',
+          url: 'https://chenmoc.com/srt/getLocation.php',
           method: 'GET',
           header: {
             'content-type': 'application/json'

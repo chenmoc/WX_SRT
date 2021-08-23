@@ -54,7 +54,7 @@ Page({
       }
       else{
         wx.request({
-        url: 'https://chenmoc.xyz/users.php',
+        url: 'https://chenmoc.com/srt/users.php',
         method: 'GET',
         data: {
           num: userNum,
@@ -99,9 +99,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      wx.request({
-        url: 'chenmoc.xyz/***.php',
-      })
+
   },
 
   /**
