@@ -53,39 +53,42 @@ Page({
         })
       }
       else{
-        wx.request({
-        url: 'https://chenmoc.com/srt/users.php',
-        method: 'GET',
-        data: {
-          num: userNum,
-          password: userPW,
-          check: app.globalData.user
-        },
-        header: {
-          'content-type' : 'application/json'
-        },
-        success: function(res){
-          console.log("damn good");
-          console.log(res.data);
-          if(res.data.status == -2){
-            wx.showModal({
-              title: '提示',
-              content: '此学号或教工号已被注册，请直接登陆',
-              showCancel: false
+        wx.login({
+          success(res){
+            wx.request({
+              url: 'https://chenmoc.com/srt/register.php',
+              method: 'GET',
+              data: {
+                num: userNum,
+                password: userPW,
+                user: app.globalData.user,
+                temp_code: res.code
+              },
+              header: {
+                'content-type' : 'application/json'
+              },
+              success: function(res){
+                if(res.data.status == -1){
+                  wx.showModal({
+                    title: '提示',
+                    content: '此学号或教工号已被注册，请直接登陆',
+                    showCancel: false
+                  })
+                }
+                else if(app.globalData.user == 2){
+                  wx.redirectTo({
+                    url: '../tea/tea',
+                  })
+                }
+                else{
+                  wx.redirectTo({
+                    url: '../index/index',
+                  })
+                }
+              }
             })
           }
-          else if(app.globalData.user == 1){
-            wx.redirectTo({
-              url: '../tea/tea',
-            })
-          }
-          else{
-            wx.redirectTo({
-              url: '../index/index',
-            })
-          }
-        }
-      })
+        })
     }
   },
 

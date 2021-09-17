@@ -1,7 +1,9 @@
 <!--pages/greet/greet.wxml-->
-<view class="title">
-<text>校园综合防控平台</text>
-</view>
+<view class="padding-sm">
+    <view class="title bg-gradual-orange padding radius text-center shadow-blur ">
+      <view class="text-lg">校园综合防控平台</view>
+    </view>
+  </view>
 <view class="icons">
 <image bindtap="stuleap" class="stu" src="../../images/student.png"></image>
 <image bindtap="tealeap" class="tea" src="../../images/teacher.png"></image>
@@ -9,4 +11,5 @@
 <view class="words">
 <text bindtap="stuleap">我是学生</text>
 <text bindtap='tealeap' class="w2">我是老师</text>
-</view>
+</view> 
+

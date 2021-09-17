@@ -38,6 +38,6 @@ App({
     userInfo: null,
     userNum: '',
     userPW: '',
-    user: 0
+    user: 1
   }
 })

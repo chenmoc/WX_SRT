@@ -10,6 +10,7 @@ Page({
 
   },
 
+
   stuleap:function(e){  //学生注册函数
    wx.redirectTo({
      url: '../register/register',
@@ -17,7 +18,7 @@ Page({
   },
 
 tealeap:function(e){  //老师注册函数
-  app.globalData.user = 1;
+  app.globalData.user = 2;
   wx.redirectTo({
     url: '../register/register',
   })

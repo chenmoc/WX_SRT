@@ -1,12 +1,11 @@
 /* pages/greet/greet.wxss */
 .title{
-  font-size:30px;
+  width: 500rpx;
+  margin-left: 111rpx;
   flex-direction:column;
   align-items:center;
-  margin-left:150rpx;
   font-weight:bold;
-  margin-top:100rpx;
-  color:	#FF4500;
+  margin-top:130rpx;
 }
 
 .stu {
