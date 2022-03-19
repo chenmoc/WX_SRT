@@ -1,6 +1,6 @@
 // pages/login/login.js
 var app = getApp();
-var userNum = '';
+var userID = '';
 var userPW = '';
 
 Page({
@@ -12,8 +12,8 @@ Page({
 
   },
 
-  inputNum: function(e){
-    userNum = e.detail.value;
+  inputID: function(e){
+    userID = e.detail.value;
  },
 
  inputPW: function(e){
@@ -23,8 +23,8 @@ Page({
 
 sure: function(){
   console.log(app.globalData.user);
-  var num = Number(userNum);
-  if(isNaN(num) || num == ""){
+  var ID = Number(userID);
+  if(isNaN(ID) || ID == ""){
     wx.showModal({
       title: '提示',
       content: '输入的学号或教工号格式不正确，请检查后重新输入',
@@ -43,18 +43,20 @@ sure: function(){
       success(res){
         wx.request({
           url: 'https://chenmoc.com/srt/login.php',
-          method: 'GET',
+          method: 'POST',
             data: {
-              num: userNum,
+              ID: userID,
               password: userPW,
               user: app.globalData.user,
               temp_code: res.code
             },
             header: {
-              'content-type' : 'application/json'
+              'content-type' : 'application/x-www-form-urlencoded'
             },
+
             success: function(res){
-              if(res.data.status == -1){
+              console.log(res.data);
+              if(res.data.status == -2){
                 wx.showModal({
                   title: '提示',
                   content: '此学号未注册，请返回注册页面',
@@ -68,7 +70,7 @@ sure: function(){
                   showCancel: false
                 })
               }
-              else if(res.data.status == -2){
+              else if(res.data.status == -1){
                 wx.showModal({
                   title: '提示',
                   content: '密码错误，请检查密码后重新输入',
@@ -76,11 +78,13 @@ sure: function(){
                 })
               }
               else if(app.globalData.user == 1){
+                app.globalData.userID = userID;
                 wx.redirectTo({
                   url: '../index/index',
                 })
               }
               else{
+                app.globalData.userID = userID;
                 wx.redirectTo({
                   url: '../tea/tea',
                 })
@@ -92,6 +96,12 @@ sure: function(){
   }
 
 },
+
+  register: function (){
+    wx.redirectTo({
+      url: '../register/register',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

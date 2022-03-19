@@ -38,7 +38,7 @@ module.exports = {
 }
 
 import * as echarts from '../../lib/ec-canvas/echarts';
-import geoJson from './mapData.js';
+import geoJson from './ujn';
 
 
 function initChart(canvas, width, height, dpr) {
@@ -49,7 +49,7 @@ function initChart(canvas, width, height, dpr) {
   });
   canvas.setChart(chart);
 
-  echarts.registerMap('henan', geoJson);
+  echarts.registerMap('ujn', geoJson);
 
   const option = {
     tooltip: {
@@ -58,6 +58,7 @@ function initChart(canvas, width, height, dpr) {
     },
 
     visualMap: {
+      show: false,
       min: 0,
       max: 100,
       left: 'left',
@@ -66,7 +67,7 @@ function initChart(canvas, width, height, dpr) {
       calculable: true
     },
     toolbox: {
-      show: true,
+      show: false,
       orient: 'vertical',
       left: 'right',
       top: 'center',
@@ -78,19 +79,23 @@ function initChart(canvas, width, height, dpr) {
     },
     series: [{
       type: 'map',
-      mapType: 'henan',
+      mapType: 'ujn',
       label: {
         normal: {
-          show: true
+          position: 'insideBottom',
+          distance: 12,
+          show: true,
+          fontSize: 11,
+          formatter: '{b}'
         },
         emphasis: {
           textStyle: {
-            color: '#fff'
+            color: '#333',
+  
           }
         }
       },
       itemStyle: {
-
         normal: {
           borderColor: '#389BB7',
           areaColor: '#fff',
@@ -103,25 +108,12 @@ function initChart(canvas, width, height, dpr) {
       animation: false,
 
       data: [
-        { name: '郑州市', value: 100 },
-        { name: '洛阳市', value: 10 },
-        { name: '开封市', value: 20 },
-        { name: '信阳市', value: 30 },
-        { name: '驻马店市', value: 40 },
-        { name: '南阳市', value: 41 },
-        { name: '周口市', value: 15 },
-        { name: '许昌市', value: 25 },
-        { name: '平顶山市', value: 35 },
-        { name: '新乡市', value: 35 },
-        { name: '漯河市', value: 35 },
-        { name: '商丘市', value: 35 },
-        { name: '三门峡市', value: 35 },
-        { name: '济源市', value: 35 },
-        { name: '焦作市', value: 35 },
-        { name: '安阳市', value: 35 },
-        { name: '鹤壁市', value: 35 },
-        { name: '濮阳市', value: 35 },
-        { name: '开封市', value: 45 }
+      {name: '化工楼', value: 10},
+			{name: '图书馆', value: 99},
+			{name: '十教及八食堂', value: 66},
+			{name: '\n\n\n\n校医院\n及操场', value: 78, position: 'bottom', distance: 10},
+			{name: '老西门及教工宿舍', value: 45},
+			{name: '新西门及三食堂', value: 33},
       ]
 
     }],
@@ -278,7 +270,7 @@ Page({
     }
   },
   numSteps() {
-    console.log(app.globalData.userNum);
+    console.log(app.globalData.user);
     if(this.data.n == 0){
       this.data.n++;
       this.setData({
@@ -295,17 +287,17 @@ Page({
            console.log(res.longitude);
            wx.request({
              url: 'https://chenmoc.com/srt/getLocation.php',
-             method: 'GET',
+             method: 'POST',
              header: {
-               "content-type" : 'application/json'
+               "content-type" : 'application/x-www-form-urlencoded'
              },
              data: {
                longitude: res.longitude,
                latitude: res.latitude,
-               userNum: app.globalData.userNum
+               ID: app.globalData.userID,
+               user: app.globalData.user
              },
              success: function(res){
-               console.log("damn good!");
                console.log(res.data);
              }
            })

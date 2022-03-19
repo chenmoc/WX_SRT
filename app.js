@@ -36,7 +36,7 @@ App({
   
   globalData: {
     userInfo: null,
-    userNum: '',
+    userID: '',
     userPW: '',
     user: 1
   }

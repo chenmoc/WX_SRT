@@ -5,7 +5,7 @@
 <view class="input">
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
-        <input class="weui-input" type="number" maxlength="20" bindinput="inputNum" placeholder="请在此输入学号或教工号" />
+        <input class="weui-input" type="number" maxlength="20" bindinput="inputID" placeholder="请在此输入学号或教工号" />
       </view>
     </view>
     <view class="weui-cells weui-cells_after-title i2">

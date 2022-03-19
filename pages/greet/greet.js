@@ -12,15 +12,18 @@ Page({
 
 
   stuleap:function(e){  //学生注册函数
+  app.globalData.user = 1;
+  console.log(app.globalData.user);
    wx.redirectTo({
-     url: '../register/register',
+     url: '../login/login',
    })
   },
 
 tealeap:function(e){  //老师注册函数
   app.globalData.user = 2;
+  console.log(app.globalData.user);
   wx.redirectTo({
-    url: '../register/register',
+    url: '../login/login',
   })
   },
 

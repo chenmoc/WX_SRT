@@ -1,6 +1,6 @@
 // pages/register/register.js
 var app = getApp();
-var userNum = '';
+var userID = '';
 var userPW = '';
 var userPWA = '';
 
@@ -13,9 +13,9 @@ Page({
       
   },
 
-  inputNum: function(e){
-     userNum = e.detail.value;
-     app.globalData.userNum = userNum;
+  inputID: function(e){
+     userID = e.detail.value;
+     app.globalData.userID = userID;
   },
 
   inputPW1: function(e){
@@ -29,9 +29,9 @@ Page({
   },
 
   sure:function(){
-    console.log(app.globalData.userNum);
-      var num = Number(userNum);
-      if(isNaN(num) || num == ""){
+    console.log(app.globalData.userID);
+      var ID = Number(userID);
+      if(isNaN(ID) || ID == ""){
         wx.showModal({
           title: '提示',
           content: '输入的学号或教工号格式不正确，请检查后重新输入',
@@ -57,17 +57,18 @@ Page({
           success(res){
             wx.request({
               url: 'https://chenmoc.com/srt/register.php',
-              method: 'GET',
+              method: 'POST',
               data: {
-                num: userNum,
+                ID: userID,
                 password: userPW,
                 user: app.globalData.user,
                 temp_code: res.code
               },
               header: {
-                'content-type' : 'application/json'
+                'content-type' : "application/x-www-form-urlencoded"
               },
               success: function(res){
+                console.log(res.data);
                 if(res.data.status == -1){
                   wx.showModal({
                     title: '提示',
@@ -76,11 +77,13 @@ Page({
                   })
                 }
                 else if(app.globalData.user == 2){
+                  app.globalData.userID = userID;
                   wx.redirectTo({
                     url: '../tea/tea',
                   })
                 }
                 else{
+                  app.globalData.userID = userID;
                   wx.redirectTo({
                     url: '../index/index',
                   })

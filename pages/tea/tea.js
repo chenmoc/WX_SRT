@@ -38,7 +38,7 @@ module.exports = {
 }
 
 import * as echarts from '../../lib/ec-canvas/echarts';
-import geoJson from './mapData.js';
+import geoJson from './ujn.js';
 
 
 function initChart(canvas, width, height, dpr) {
@@ -49,7 +49,7 @@ function initChart(canvas, width, height, dpr) {
   });
   canvas.setChart(chart);
 
-  echarts.registerMap('henan', geoJson);
+  echarts.registerMap('ujn', geoJson);
 
   const option = {
     tooltip: {
@@ -58,6 +58,7 @@ function initChart(canvas, width, height, dpr) {
     },
 
     visualMap: {
+      show: false,
       min: 0,
       max: 100,
       left: 'left',
@@ -66,7 +67,7 @@ function initChart(canvas, width, height, dpr) {
       calculable: true
     },
     toolbox: {
-      show: true,
+      show: false,
       orient: 'vertical',
       left: 'right',
       top: 'center',
@@ -78,19 +79,23 @@ function initChart(canvas, width, height, dpr) {
     },
     series: [{
       type: 'map',
-      mapType: 'henan',
+      mapType: 'ujn',
       label: {
         normal: {
-          show: true
+          position: 'insideBottom',
+          distance: 12,
+          show: true,
+          fontSize: 11,
+          formatter: '{b}'
         },
         emphasis: {
           textStyle: {
-            color: '#fff'
+            color: '#333',
+  
           }
         }
       },
       itemStyle: {
-
         normal: {
           borderColor: '#389BB7',
           areaColor: '#fff',
@@ -103,25 +108,12 @@ function initChart(canvas, width, height, dpr) {
       animation: false,
 
       data: [
-        { name: '郑州市', value: 100 },
-        { name: '洛阳市', value: 10 },
-        { name: '开封市', value: 20 },
-        { name: '信阳市', value: 30 },
-        { name: '驻马店市', value: 40 },
-        { name: '南阳市', value: 41 },
-        { name: '周口市', value: 15 },
-        { name: '许昌市', value: 25 },
-        { name: '平顶山市', value: 35 },
-        { name: '新乡市', value: 35 },
-        { name: '漯河市', value: 35 },
-        { name: '商丘市', value: 35 },
-        { name: '三门峡市', value: 35 },
-        { name: '济源市', value: 35 },
-        { name: '焦作市', value: 35 },
-        { name: '安阳市', value: 35 },
-        { name: '鹤壁市', value: 35 },
-        { name: '濮阳市', value: 35 },
-        { name: '开封市', value: 45 }
+      {name: '化工楼', value: 10},
+			{name: '图书馆', value: 99},
+			{name: '十教及八食堂', value: 66},
+			{name: '\n\n\n\n校医院\n及操场', value: 78, position: 'bottom', distance: 10},
+			{name: '老西门及教工宿舍', value: 45},
+			{name: '新西门及三食堂', value: 33},
       ]
 
     }],
@@ -139,7 +131,7 @@ Page({
     ec: {
       onInit: initChart
     },
-    userNum: app.globalData.userNum,
+    userID: app.globalData.userID,
     time: '',
     time1: '',
     time2: '',
@@ -183,31 +175,31 @@ Page({
         success: function(res){
           var lat1 = '';
           var lng1 = '';
-          console.log(res);
+          // console.log(res);
            lat1 = res.latitude;
            lng1 = res.longitude;
            console.log(res.latitude);
            console.log(res.longitude);
            console.log(lat1);
            console.log(lng1);
+           wx.request({
+            url: 'https://chenmoc.com/srt/getLocation.php',
+            method: 'POST',
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            data: {
+              longitude: res.longitude,
+              latitude: res.latitude,
+              ID: app.globalData.userID,
+              user: app.globalData.user
+            },
+            success: function(res){
+              console.log(res.data);
+            }
+          })
         }
       })
-        wx.request({
-          url: 'https://chenmoc.com/srt/getLocation.php',
-          method: 'GET',
-          header: {
-            'content-type': 'application/json'
-          },
-          data:{
-            longitude: lng1,
-            latitude: lat1,
-            userNum: app.globalData.userNum
-          },
-          success: function(res){
-            console.log(res);
-            console.log('damn good');
-          }
-        })
 },
 temper(){
   console.log(this.data.temperNum);
