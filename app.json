@@ -5,10 +5,7 @@
     "pages/tea/tea",
     "pages/login/login",
     "pages/register/register",
-    "pages/map/map",
-    "pages/logs/logs",
-    "pages/test/test",
-    "pages/sd/sd"
+    "pages/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,12 +28,6 @@
         "pagePath": "pages/map/map",
         "iconPath": "images/info.png",
         "selectedIconPath": "images/info_selected.png"
-      },
-      {
-        "text": "体温",
-        "pagePath": "pages/logs/logs",
-        "iconPath": "images/temp.png",
-        "selectedIconPath": "images/temp_selected.png"
       }
     ],
     "color": "black",

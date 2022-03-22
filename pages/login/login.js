@@ -56,6 +56,7 @@ sure: function(){
 
             success: function(res){
               console.log(res.data);
+              console.log(typeof(res.data))
               if(res.data.status == -2){
                 wx.showModal({
                   title: '提示',

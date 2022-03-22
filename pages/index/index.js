@@ -12,6 +12,7 @@ function distance(lat1,long1,lat2,long2) {  //距离函数：根据两点经纬�
   d = d * 6370.856;
   d = Math.round(d*10000)/10000;
   return d;
+  
 }
 
 

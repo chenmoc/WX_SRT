@@ -38,7 +38,7 @@
 </view>
 <view class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/temp.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
         <view class="content">
           <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
@@ -53,7 +53,7 @@
     </view>
     <view style="{{list1}}" class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/temp.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
         <view class="content">
           <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
@@ -68,7 +68,7 @@
     </view>
     <view style="{{list2}}" class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/temp.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
         <view class="content">
           <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
@@ -83,7 +83,7 @@
     </view>
     <view style="{{list3}}" class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/temp.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
         <view class="content">
           <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
@@ -98,7 +98,7 @@
     </view>
     <view style="{{list4}}" class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/temp.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
         <view class="content">
           <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
@@ -113,7 +113,7 @@
     </view>
     <view style="{{list5}}" class="cu-list menu-avatar comment solids-top">
       <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/temp.png);"></view>
+        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
         <view class="content">
           <view class="text-grey">{{userNum}}</view>
           <view class=" text-content text-black">
