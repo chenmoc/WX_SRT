@@ -41,7 +41,7 @@
     "minifyWXML": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.15.0",
+  "libVersion": "2.23.2",
   "appid": "wxdcb94f91b0e2b22f",
   "projectname": "campusEnv",
   "debugOptions": {

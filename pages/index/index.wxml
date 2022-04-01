@@ -1,133 +1,23 @@
-
-<view class="cu-bar bg-white solid-bottom margin-top">
-  <view class="action">
-    <text class="cuIcon-title text-orange"></text> 课堂签到
-  </view>
-  <view class="action">
-    <button class="cu-btn light bg-blue shadow" bindtap="numSteps">{{btnText}}</button>
-  </view>
-</view>
-<view class="bg-white padding">
-  <view class="cu-steps">
-    <view class="cu-item {{index>num?'':'text-blue'}}" wx:for="{{numList}}" wx:key="id">
-      <text class="num {{index==3?'err':''}}" data-index="{{index + 1}}"></text> {{item.name}}
+<view class="container">
+    <!-- <image class="nav-img" src="../../images/bg1.jpg" mode="aspectFill"></image> -->
+    <view class="nav-head">
+      <image class="nav-img" src="../../images/ak.jpg"></image>
     </view>
+  <view class="nav-list">
+    <navigator open-type="navigate" url="/pages/{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" wx:for="{{acts}}"wx:key="this">
+      <text class='cuIcon-{{item.icon}}'></text>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+    </navigator>
   </view>
 </view>
 
-
-<view class="cu-bar bg-white solid-bottom">
-  <view class="action">
-    <text class="cuIcon-title text-orange"></text> 人群密度
-  </view>
-  <view class="action">
-    <button class="cu-btn light bg-blue shadow" bindtap="numSteps">实时密度显示</button>
-  </view>
-</view>
-<view class=" space container">
-  <ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ ec }}"></ec-canvas>
-</view>
-
-    <view class="space1 cu-bar bg-white solid-bottom margin-top">
-  <view class="action">
-    <text class="cuIcon-title text-blue"></text> 体温填报
-  </view>
-  <view class="action">
-    <button class="cu-btn bg-blue shadow" bindtap="temper">测量体温</button>
-  </view>
-</view>
-<view class="cu-list menu-avatar comment solids-top">
-      <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
-        <view class="content">
-          <view class="text-grey">{{userNum}}</view>
-          <view class=" text-content text-black">
-            {{temper}}
-            <text  style="{{icon_style}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
-          </view>
-          <view class="margin-top-sm flex justify-between">
-            <view class="text-gray text-df">{{time}}</view>
-          </view>
-        </view>
-      </view>
-    </view>
-    <view style="{{list1}}" class="cu-list menu-avatar comment solids-top">
-      <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
-        <view class="content">
-          <view class="text-grey">{{userNum}}</view>
-          <view class=" text-content text-black">
-            {{temper1}}
-            <text  style="{{icon_style1}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
-          </view>
-          <view class="margin-top-sm flex justify-between">
-            <view class="text-gray text-df">{{time1}}</view>
-          </view>
-        </view>
-      </view>
-    </view>
-    <view style="{{list2}}" class="cu-list menu-avatar comment solids-top">
-      <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
-        <view class="content">
-          <view class="text-grey">{{userNum}}</view>
-          <view class=" text-content text-black">
-            {{temper2}}
-            <text  style="{{icon_style2}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
-          </view>
-          <view class="margin-top-sm flex justify-between">
-            <view class="text-gray text-df">{{time2}}</view>
-          </view>
-        </view>
-      </view>
-    </view>
-    <view style="{{list3}}" class="cu-list menu-avatar comment solids-top">
-      <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
-        <view class="content">
-          <view class="text-grey">{{userNum}}</view>
-          <view class=" text-content text-black">
-            {{temper3}}
-            <text  style="{{icon_style3}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
-          </view>
-          <view class="margin-top-sm flex justify-between">
-            <view class="text-gray text-df">{{time3}}</view>
-          </view>
-        </view>
-      </view>
-    </view>
-    <view style="{{list4}}" class="cu-list menu-avatar comment solids-top">
-      <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
-        <view class="content">
-          <view class="text-grey">{{userNum}}</view>
-          <view class=" text-content text-black">
-            {{temper4}}
-            <text  style="{{icon_style4}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
-          </view>
-          <view class="margin-top-sm flex justify-between">
-            <view class="text-gray text-df">{{time4}}</view>
-          </view>
-        </view>
-      </view>
-    </view>
-    <view style="{{list5}}" class="cu-list menu-avatar comment solids-top">
-      <view class="cu-item">
-        <view class="cu-avatar " style="background-image:url(https://chenmoc.com/srt/imgs/temper.png);"></view>
-        <view class="content">
-          <view class="text-grey">{{userNum}}</view>
-          <view class=" text-content text-black">
-            {{temper5}}
-            <text  style="{{icon_style5}}" class=" cuIcon-roundcheckfill text-green text-xsl"></text>
-          </view>
-          <view class="margin-top-sm flex justify-between">
-            <view class="text-gray text-df">{{time5}}</view>
-          </view>
-        </view>
-      </view>
-    </view>
-
-
-    
-
-
+<!-- <scroll-view > -->
+  <!-- <view class="header"> -->
+    <!-- <swiper class="header"  indicator-dots="true" circular="true" autoplay="true" interval="1000" duration="600">
+      <swiper-item wx:for="{{sList}}">
+        <image src="{{item.url}}" mode="aspectFit" wx:if="{{item.type=='image'}}"></image>
+      </swiper-item>
+    </swiper> -->
+  <!-- </view> -->
+<!-- </scroll-view> -->

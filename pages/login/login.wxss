@@ -1,5 +1,4 @@
-/* pages/register/register.wxss */
-@import "../../lib/weui.wxss";
+
 
 .title{
   font-size:25px;

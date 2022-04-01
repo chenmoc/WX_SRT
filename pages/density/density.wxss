@@ -1,0 +1,24 @@
+.ce-title{
+  margin-top: 40rpx;
+  width: 600rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 60rpx;  /*设置line-height与父级元素的height相等保持垂直居中*/
+  /* background-color: gainsboro; */
+  border: solid black;
+  /* border-width: 10rpx; */
+  border-radius: 30rpx;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.campus-map{
+  width: 660rpx;
+  height: 400rpx;
+}
+
+.count{
+  margin-top: 40rpx;
+  width: 660rpx;
+  height:660rpx;
+}

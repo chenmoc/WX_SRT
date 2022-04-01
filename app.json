@@ -1,7 +1,9 @@
 {
   "pages": [
+    "pages/index/index", 
+    "pages/density/density",
+    "pages/home/home",
     "pages/greet/greet",
-    "pages/index/index",
     "pages/tea/tea",
     "pages/login/login",
     "pages/register/register",
@@ -9,29 +11,31 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "校园综合防控平台",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "list": [
       {
         "text": "首页",
-        "pagePath": "pages/greet/greet",
+        "pagePath": "pages/index/index",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home_selected.png"
       },
       {
         "text": "个人信息",
-        "pagePath": "pages/map/map",
+        "pagePath": "pages/login/login",
         "iconPath": "images/info.png",
         "selectedIconPath": "images/info_selected.png"
       }
     ],
-    "color": "black",
-    "selectedColor": "#FF4500"
+    "selectedColor": "#F95738"
   },
   "permission": {
     "scope.userLocation": {

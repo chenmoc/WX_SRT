@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="ce-title">实时人群密度显示</view>
+  <ec-canvas id="campus-map" canvas-id="campus-map" class="campus-map" ec="{{ ec1 }}"></ec-canvas>
+  <ec-canvas id="count" canvas-id="count" class="count" ec="{{ ec2 }}"></ec-canvas>
+</view>

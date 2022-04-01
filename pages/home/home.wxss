@@ -1,0 +1,17 @@
+.steps-bottom.cu-steps .cu-item .num::before {
+  content: "\e668";
+  font-family: 'iconfont';
+}
+
+ec-canvas {
+  width: 750rpx;
+  height: 600rpx;
+}
+
+.space {
+  margin-top:180px;
+}
+
+.space1 {
+   margin-top: 450rpx;
+}
