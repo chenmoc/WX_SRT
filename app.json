@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/index/index", 
+    "pages/index/index",
+    "pages/check/check",
+    "pages/temper/temper",
+    "pages/schedule/schedule",
+    "pages/sign/sign",
     "pages/density/density",
     "pages/home/home",
     "pages/greet/greet",

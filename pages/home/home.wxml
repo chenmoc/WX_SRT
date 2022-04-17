@@ -24,11 +24,11 @@
     <button class="cu-btn light bg-blue shadow" bindtap="numSteps">实时密度显示</button>
   </view>
 </view>
-<view class=" space container">
+<view class="container">
   <ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ ec }}"></ec-canvas>
 </view>
 
-    <view class="space1 cu-bar bg-white solid-bottom margin-top">
+    <view class="cu-bar bg-white solid-bottom margin-top">
   <view class="action">
     <text class="cuIcon-title text-blue"></text> 体温填报
   </view>

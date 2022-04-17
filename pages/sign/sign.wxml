@@ -1,0 +1,44 @@
+<view class="container" >
+<view class="ce-title" >课堂签到</view>
+<view class="bg-white padding cus-dk margin-top">
+  <view class="cu-steps">
+    <view class="cu-item {{index>num?'':'text-green'}}" wx:for="{{numList}}" wx:key>
+      <text class="cuIcon-{{item.icon}}" ></text> {{index>num? '': item.name}}
+    </view>
+  </view>
+</view>
+<view class="action margin-top"  wx:for="{{btnList}}" wx:key wx:if="{{index==num}}">
+    <button class="cu-btn bg-blue shadow" bindtap="numSteps" >{{item.name}}</button>
+  </view>
+
+<!-- <button class="cu-btn bg-blue shadow margin-top action" bindtap="consent">check</button>
+
+<button class="cu-btn bg-blue shadow margin-top action" bindtap="mess">send</button> -->
+
+  <view class="cu-timeline">
+  <view class="cu-time cus-time">签到记录</view>
+  <view class="cu-item text-green cuIcon-roundcheckfill">
+    <view class="content bg-green shadow-blur">
+      <text>2022.04.10</text> 高等代数课程 签到成功
+    </view>
+  </view>
+  <view class="cu-item text-green cuIcon-roundcheckfill">
+    <view class="content bg-green shadow-blur">
+      <text>2022.04.10</text> 高等代数课程 签到成功
+    </view>
+  </view>
+  <view class="cu-item text-red cuIcon-roundclosefill">
+    <view class="content bg-red shadow-blur">
+      <text>2022.04.12</text> 篮球提高课程 签到失败
+    </view>
+  </view>
+  <view class="cu-item text-green cuIcon-roundcheckfill">
+    <view class="content bg-green shadow-blur">
+      <text>2022.04.10</text> 高等代数课程 签到成功
+    </view>
+  </view>
+</view>
+</view>
+
+
+

@@ -1,0 +1,20 @@
+.steps-bottom.cu-steps .cu-item .num::before {
+  content: "\e668";
+  font-family: 'iconfont';
+}
+
+.ce-title{
+  margin-top: 40rpx;
+  width: 600rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 60rpx;  
+  border: solid #000000;
+  border-radius: 30rpx;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.cus-dk{
+  width: 730rpx;
+}

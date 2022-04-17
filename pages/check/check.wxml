@@ -1,0 +1,31 @@
+<view class="container" >
+<view class="ce-title" >核酸检测</view>
+
+<view class="padding flex flex-direction shadow-blur cus-btn">
+  <button class="cu-btn bg-blue lg" bindtap="consent">开启核酸检测提醒</button>
+</view>
+
+<view class="cu-timeline">
+  <view class="cu-time cus-check">检测历史</view>
+  <view class="cu-item text-green cuIcon-roundcheckfill">
+    <view class="content bg-green shadow-blur">
+      <text>2022.04.18</text> 新型冠状病毒检测结果：阴性
+    </view>
+  </view>
+  <view class="cu-item text-green cuIcon-roundcheckfill">
+    <view class="content bg-green shadow-blur">
+      <text>2022.04.14</text> 新型冠状病毒检测结果：阴性
+    </view>
+  </view>
+  <view class="cu-item text-green cuIcon-roundcheckfill">
+    <view class="content bg-green shadow-blur">
+      <text>2022.04.10</text> 新型冠状病毒检测结果：阴性
+    </view>
+  </view>
+  <view class="cu-item text-green cuIcon-roundcheckfill">
+    <view class="content bg-green shadow-blur">
+      <text>2022.04.06</text> 新型冠状病毒检测结果：阴性
+    </view>
+  </view>
+</view>
+</view>

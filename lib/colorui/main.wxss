@@ -2020,7 +2020,7 @@ button.icon.lg {
 	text-align: center;
 	padding: 20rpx 0;
 	font-size: 26rpx;
-	color: #888;
+	color: #000000;
 	display: block;
 }
 

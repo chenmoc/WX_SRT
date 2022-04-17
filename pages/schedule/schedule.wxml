@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="ce-title">自动排班</view>
+
+  <view class="chosen-time">
+    <view class="text-blue cuIcon-time cus-time">
+    </view>
+    <picker mode="time" value="{{time1}}" start="00:00" end="23:59" bindchange="Time1Change">
+      <view class="cus-pv">
+        {{time1}} -----
+      </view>
+    </picker>
+    <picker mode="time" value="{{time2}}" start="00:00" end="23:59" bindchange="Time2Change">
+      <view class="picker2">
+        ----- {{time2}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="chosen-time">
+    <view class="text-blue cuIcon-time cus-time">
+    </view>
+    <picker mode="time" value="{{time3}}" start="00:00" end="23:59" bindchange="Time1Change">
+      <view class="cus-pv">
+        {{time3}} -----
+      </view>
+    </picker>
+    <picker mode="time" value="{{time4}}" start="00:00" end="23:59" bindchange="Time2Change">
+      <view class="picker2">
+        ----- {{time4}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="chosen-time">
+    <view class="text-blue cuIcon-time cus-time">
+    </view>
+    <picker mode="time" value="{{time5}}" start="00:00" end="23:59" bindchange="Time1Change">
+      <view class="cus-pv">
+        {{time5}} -----
+      </view>
+    </picker>
+    <picker mode="time" value="{{time6}}" start="00:00" end="23:59" bindchange="Time2Change">
+      <view class="picker2">
+        ----- {{time6}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="chosen-time">
+    <view class="text-blue cuIcon-time cus-time">
+    </view>
+    <picker mode="time" value="{{time7}}" start="00:00" end="23:59" bindchange="Time1Change">
+      <view class="cus-pv">
+        {{time7}} -----
+      </view>
+    </picker>
+    <picker mode="time" value="{{time8}}" start="00:00" end="23:59" bindchange="Time2Change">
+      <view class="picker2">
+        ----- {{time8}}
+      </view>
+    </picker>
+  </view>
+
+  <view>
+    <button bindtap="leap" class="weui-btn weui-btn_primary cus-btn">确认</button>
+  </view>
+</view>

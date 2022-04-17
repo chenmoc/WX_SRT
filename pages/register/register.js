@@ -85,7 +85,7 @@ Page({
                 else{
                   app.globalData.userID = userID;
                   wx.redirectTo({
-                    url: '../index/index',
+                    url: '../home/home',
                   })
                 }
               }
@@ -97,7 +97,7 @@ Page({
 
 
   login:function(){
-    wx.redirectTo({
+    wx.switchTab({
       url: '../login/login',
     })
   },

@@ -78,10 +78,11 @@ sure: function(){
                   showCancel: false
                 })
               }
+
               else if(app.globalData.user == 1){
                 app.globalData.userID = userID;
                 wx.redirectTo({
-                  url: '../index/index',
+                  url: '../home/home',
                 })
               }
               else{

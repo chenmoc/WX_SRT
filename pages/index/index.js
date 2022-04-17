@@ -50,8 +50,8 @@ Page({
       icon: 'scan'
     },
     {
-      title: '请假出校',
-      name: 'leave',
+      title: '自动排班',
+      name: 'schedule',
       color: 'cr5',
       icon: 'roundright'
     },
@@ -60,7 +60,7 @@ Page({
       name: 'remind',
       color: 'cr6',
       icon: 'notification'
-    }],
+    },],
   },
 
   /**

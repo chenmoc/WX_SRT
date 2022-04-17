@@ -1,0 +1,49 @@
+
+.ce-title {
+  margin-top: 40rpx;
+  width: 600rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border: solid #000000;
+  border-radius: 30rpx;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.chosen-time {
+  background-color: white;
+  display: flex;
+  padding: 1rpx 30rpx;
+  min-height: 100rpx;
+  position: relative;
+  width: 600rpx;
+  margin-top: 70rpx;
+}
+
+.cus-time {
+  display: flex;
+  width: 40rpx;
+  font-size: 40rpx;
+  color: #000000;
+}
+
+.cus-pv {
+  font-size: 40rpx;
+  margin-left: 50rpx;
+  width: 200rpx;
+}
+
+.picker2 {
+  font-size: 40rpx;
+  width: 200rpx;
+}
+
+.cus-btn {
+  margin-top: 80rpx;
+}
+
+.out {
+  background-color: #ffffff;
+  height: 100vh;
+}
