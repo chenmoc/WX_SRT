@@ -1,0 +1,23 @@
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+  font-size: large;
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  font-size: 30rpx;
+  margin-left: 300rpx;
+}

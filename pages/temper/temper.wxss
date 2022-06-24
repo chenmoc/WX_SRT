@@ -13,6 +13,7 @@
 
 .cus-btn{
   margin-top: 50rpx;
+  text-align: center;
 }
 
 

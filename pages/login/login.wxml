@@ -1,8 +1,21 @@
-<view class="title">
-  <text>登录</text>
+<!-- <view class="container"> -->
+<view class="cus-title" >
+<image class="cus-bg" src="../../images/bg.JPG" mode="aspectFill"></image>
+  <text class="cus-tt">嗨，你好\n欢迎回来</text>
 </view>
 
-<view class="input">
+<form class="input">
+	<view class="cu-form-group margin-top ">
+		<view class="title" style="font-size: 1.6em;">账号：</view>
+		<input placeholder="请在此输入学号或教工号" style="font-size: 1.3em;"></input>
+	</view>
+  <view class="cu-form-group margin-top " style="margin-top: 30px;">
+		<view class="title" style="font-size: 1.6em;">密码：</view>
+		<input placeholder="请在此输入您的登录密码" style="font-size: 1.3em;"></input>
+	</view>
+</form>
+
+<!-- <view class="input">
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
         <input class="weui-input" type="number" maxlength="20" bindinput="inputID" placeholder="请在此输入学号或教工号" />
@@ -13,7 +26,7 @@
         <input class="weui-input" password type="text" maxlength="20" bindinput="inputPW" placeholder="请在此输入您的登录密码" />
       </view>
     </view>
-</view>
+</view> -->
 
 <view class="sure">
   <button type="primary" plain="true" bindtap="sure">登录</button>
@@ -23,6 +36,4 @@
   <button type="primary" bindtap="register">没有账号？</button>
 </view>
 
-<view class="ps">
-  <text>PS：我们不会以任何方式主动向任何\n个人或组织共享、转让您的账号和密码</text>
-</view>
+<!-- </view> -->

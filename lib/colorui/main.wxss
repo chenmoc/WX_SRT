@@ -2370,15 +2370,15 @@ button.icon.lg {
 .cu-form-group .title {
 	text-align: justify;
 	padding-right: 30rpx;
-	font-size: 30rpx;
+	font-size: 50rpx;
 	position: relative;
-	height: 60rpx;
-	line-height: 60rpx;
+	height: 80rpx;
+	line-height: 80rpx;
 }
 
 .cu-form-group input {
 	flex: 1;
-	font-size: 30rpx;
+	font-size: 40rpx;
 	color: #555;
 	padding-right: 20rpx;
 }

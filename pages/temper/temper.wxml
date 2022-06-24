@@ -1,8 +1,8 @@
 <view class="container" >
 <view class="ce-title" >体温填报</view>
 
-<view class="padding flex flex-direction shadow-blur cus-btn">
-  <button class="cu-btn bg-blue lg" bindtap="consent">开启体温自动填报</button>
+<view class="padding flex flex-direction shadow-blur">
+  <button class="cu-btn bg-yellow lg cus-btn" bindtap="consent">体温自动填报开启</button>
 </view>
 
 <view class="cu-timeline">

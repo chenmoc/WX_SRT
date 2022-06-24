@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/info/info",
+    "pages/login/login",
     "pages/check/check",
     "pages/temper/temper",
     "pages/schedule/schedule",
@@ -9,7 +11,6 @@
     "pages/home/home",
     "pages/greet/greet",
     "pages/tea/tea",
-    "pages/login/login",
     "pages/register/register",
     "pages/map/map"
   ],
@@ -34,7 +35,7 @@
       },
       {
         "text": "个人信息",
-        "pagePath": "pages/login/login",
+        "pagePath": "pages/info/info",
         "iconPath": "images/info.png",
         "selectedIconPath": "images/info_selected.png"
       }

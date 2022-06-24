@@ -19,12 +19,12 @@
   <view class="chosen-time">
     <view class="text-blue cuIcon-time cus-time">
     </view>
-    <picker mode="time" value="{{time3}}" start="00:00" end="23:59" bindchange="Time1Change">
+    <picker mode="time" value="{{time3}}" start="00:00" end="23:59" bindchange="Time3Change">
       <view class="cus-pv">
         {{time3}} -----
       </view>
     </picker>
-    <picker mode="time" value="{{time4}}" start="00:00" end="23:59" bindchange="Time2Change">
+    <picker mode="time" value="{{time4}}" start="00:00" end="23:59" bindchange="Time4Change">
       <view class="picker2">
         ----- {{time4}}
       </view>
@@ -34,27 +34,28 @@
   <view class="chosen-time">
     <view class="text-blue cuIcon-time cus-time">
     </view>
-    <picker mode="time" value="{{time5}}" start="00:00" end="23:59" bindchange="Time1Change">
+    <picker mode="time" value="{{time5}}" start="00:00" end="23:59" bindchange="Time5Change">
       <view class="cus-pv">
         {{time5}} -----
       </view>
     </picker>
-    <picker mode="time" value="{{time6}}" start="00:00" end="23:59" bindchange="Time2Change">
+    <picker mode="time" value="{{time6}}" start="00:00" end="23:59" bindchange="Time6Change">
       <view class="picker2">
         ----- {{time6}}
       </view>
     </picker>
   </view>
 
+
   <view class="chosen-time">
     <view class="text-blue cuIcon-time cus-time">
     </view>
-    <picker mode="time" value="{{time7}}" start="00:00" end="23:59" bindchange="Time1Change">
+    <picker mode="time" value="{{time7}}" start="00:00" end="23:59" bindchange="Time7Change">
       <view class="cus-pv">
         {{time7}} -----
       </view>
     </picker>
-    <picker mode="time" value="{{time8}}" start="00:00" end="23:59" bindchange="Time2Change">
+    <picker mode="time" value="{{time8}}" start="00:00" end="23:59" bindchange="Time8Change">
       <view class="picker2">
         ----- {{time8}}
       </view>
